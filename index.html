@@ -1,30 +1,15 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absensi PIK-R A'FORLING</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <h1>A'FORLING ATTENDANCE</h1>
-    <p>FOR BETTER FUTURE</p>
-</header>
-
 <div class="container">
     <div id="formSection" class="card">
-        <h2>Isi Absensi Pertemuan</h2>
+        <h2>Isi Absensi A'FORLING</h2>
         <form id="absensiForm">
-            <label class="label-input">Tanggal Pertemuan:</label>
+            <label class="label-input">Tanggal:</label>
             <input type="date" id="tanggal" required>
             
             <input type="text" id="nama" placeholder="Nama Lengkap" required>
-            <input type="text" id="kelas" placeholder="Kelas (contoh: XI-1/X-I)" required>
+            <input type="text" id="kelas" placeholder="Kelas" required>
             
             <select id="keterangan" required>
-                <option value="">-- Pilih Keterangan --</option>
+                <option value="">-- Keterangan --</option>
                 <option value="Hadir">Hadir</option>
                 <option value="Izin">Izin</option>
                 <option value="Sakit">Sakit</option>
@@ -33,48 +18,20 @@
             <textarea id="materi" placeholder="Materi hari ini..." rows="3" required></textarea>
             <button type="submit" class="btn-primary">KIRIM ABSENSI</button>
         </form>
-        <p class="admin-link"><a href="#" onclick="showLogin()">Login Admin</a></p>
-    </div>
-
-    <div id="loginSection" class="card" style="display:none;">
-        <h2>Login Admin</h2>
-        <input type="text" id="userAdmin" placeholder="Username">
-        <input type="password" id="passAdmin" placeholder="Password">
-        <button onclick="cekLogin()" class="btn-admin">MASUK</button>
-        <button onclick="backToHome()" class="btn-cancel">BATAL</button>
     </div>
 
     <div id="adminSection" class="card" style="display:none;">
-        <h2>Database Absensi</h2>
-        <div class="filter-group">
-            <label>Pilih Bulan:</label>
-            <select id="filterBulan" onchange="tampilkanData()">
-                <option value="01">Januari</option>
-                <option value="02">Februari</option>
-                <option value="03">Maret</option>
-                <option value="04">April</option>
-                <option value="05">Mei</option>
-                <option value="06">Juni</option>
-                <option value="07">Juli</option>
-                <option value="08">Agustus</option>
-                <option value="09">September</option>
-                <option value="10">Oktober</option>
-                <option value="11">November</option>
-                <option value="12">Desember</option>
+        <h2 style="color:var(--merah)">Database Rahasia</h2>
+        <select id="filterBulan" onchange="tampilkanData()" style="margin-bottom:10px">
+            <option value="02">Februari</option>
+            <option value="03">Maret</option>
             </select>
-        </div>
         <div class="table-container">
             <table class="data-table">
-                <thead>
-                    <tr><th>Tgl</th><th>Nama</th><th>Ket</th></tr>
-                </thead>
+                <thead><tr><th>Tgl</th><th>Nama</th><th>Ket</th></tr></thead>
                 <tbody id="tabelBody"></tbody>
             </table>
         </div>
-        <button onclick="logout()" class="btn-logout">LOGOUT</button>
+        <button onclick="location.reload()" class="btn-logout">TUTUP</button>
     </div>
 </div>
-
-<script src="script.js"></script>
-</body>
-</html>
