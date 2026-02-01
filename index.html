@@ -10,14 +10,14 @@
 
 <header>
     <h1>A'FORLING</h1>
-    <p>FOR BETTTER FUTURE</p>
+    <p>FOR BETTER FUTURE</p>
 </header>
 
 <div class="container">
     <div id="formSection" class="card">
         <h2>Presensi Pertemuan</h2>
         <form id="absensiForm">
-            <label class="label-input">Tanggal:</label>
+            <label class="label-input">Tanggal Pertemuan:</label>
             <input type="date" id="tanggal" required>
             
             <input type="text" id="nama" placeholder="Nama Lengkap" required>
@@ -30,34 +30,9 @@
                 <option value="Sakit">Sakit</option>
             </select>
             
-            <textarea id="materi" placeholder="Materi hari ini..." rows="3" required></textarea>
+            <textarea id="materi" placeholder="Materi yang dibahas hari ini..." rows="3" required></textarea>
             <button type="submit" class="btn-primary">KIRIM ABSENSI</button>
         </form>
-    </div>
-
-    <div id="adminSection" class="card" style="display:none;">
-        <h2 style="color:var(--merah)">Database Admin</h2>
-        <select id="filterBulan" onchange="tampilkanData()">
-            <option value="01">Januari</option>
-            <option value="02">Februari</option>
-            <option value="03">Maret</option>
-            <option value="03">April</option>
-            <option value="03">Mei</option>
-            <option value="03">Juni</option>
-            <option value="03">Juli</option>
-            <option value="03">Agustus</option>
-            <option value="03">September</option>
-            <option value="03">Oktober</option>
-            <option value="03">November</option>
-            <option value="03">Desember</option>
-        </select>
-        <div class="table-container">
-            <table class="data-table">
-                <thead><tr><th>Tgl</th><th>Nama</th><th>Ket</th></tr></thead>
-                <tbody id="tabelBody"></tbody>
-            </table>
-        </div>
-        <button onclick="location.reload()" class="btn-logout">KEMBALI</button>
     </div>
 </div>
 
