@@ -1,5 +1,4 @@
-// Ganti dengan URL Web App dari hasil Deploy Google Apps Script kamu
-const SCRIPT_URL = "URL_WEB_APP_KAMU"; 
+const SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1ZSYjxlOxxrUVEcm8fVQ1NBgXH-TR8RGTey_b13bepyg/edit?gid=0#gid=0"; 
 
 document.getElementById('absensiForm').addEventListener('submit', function(e) {
     e.preventDefault();
