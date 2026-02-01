@@ -1,6 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi PIK-R A'FORLING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>A'FORLING</h1>
+    <p>FOR BETTTER FUTURE</p>
+</header>
+
 <div class="container">
     <div id="formSection" class="card">
-        <h2>Isi Absensi A'FORLING</h2>
+        <h2>Presensi Pertemuan</h2>
         <form id="absensiForm">
             <label class="label-input">Tanggal:</label>
             <input type="date" id="tanggal" required>
@@ -9,7 +24,7 @@
             <input type="text" id="kelas" placeholder="Kelas" required>
             
             <select id="keterangan" required>
-                <option value="">-- Keterangan --</option>
+                <option value="">-- Pilih Keterangan --</option>
                 <option value="Hadir">Hadir</option>
                 <option value="Izin">Izin</option>
                 <option value="Sakit">Sakit</option>
@@ -21,17 +36,31 @@
     </div>
 
     <div id="adminSection" class="card" style="display:none;">
-        <h2 style="color:var(--merah)">Database Rahasia</h2>
-        <select id="filterBulan" onchange="tampilkanData()" style="margin-bottom:10px">
+        <h2 style="color:var(--merah)">Database Admin</h2>
+        <select id="filterBulan" onchange="tampilkanData()">
+            <option value="01">Januari</option>
             <option value="02">Februari</option>
             <option value="03">Maret</option>
-            </select>
+            <option value="03">April</option>
+            <option value="03">Mei</option>
+            <option value="03">Juni</option>
+            <option value="03">Juli</option>
+            <option value="03">Agustus</option>
+            <option value="03">September</option>
+            <option value="03">Oktober</option>
+            <option value="03">November</option>
+            <option value="03">Desember</option>
+        </select>
         <div class="table-container">
             <table class="data-table">
                 <thead><tr><th>Tgl</th><th>Nama</th><th>Ket</th></tr></thead>
                 <tbody id="tabelBody"></tbody>
             </table>
         </div>
-        <button onclick="location.reload()" class="btn-logout">TUTUP</button>
+        <button onclick="location.reload()" class="btn-logout">KEMBALI</button>
     </div>
 </div>
+
+<script src="script.js"></script>
+</body>
+</html>
